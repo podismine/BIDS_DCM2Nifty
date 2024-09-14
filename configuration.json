@@ -1,0 +1,50 @@
+{	
+  "searchMethod": "re",
+  "caseSensitive": false,
+  "dcm2niixOptions": "-b y -ba y -i y -z y -f '%3s_%f_%p_%t'",
+  "descriptions": [
+    {
+      "criteria": {
+        "SeriesDescription": ".*mpr*|.*mp-rage*|.*T1W*|.*SPGR*|.*3D BRAVO*|.*T1W_3D_TFE*"
+      },
+      "dataType": "anat",
+      "modalityLabel": "T1w"
+    },
+    {
+      "criteria": {
+        "SeriesDescription": ".*FLAIR*"
+      },
+      "dataType": "anat",
+      "modalityLabel": "FLAIR"
+    },
+	{
+      "criteria": {
+        "SeriesDescription": ".*dual*"
+      },
+      "dataType": "anat",
+      "modalityLabel": "T2w"
+    },
+    {
+      "criteria": {
+        "SeriesDescription": ".*TOF_3D*"
+      },
+      "dataType": "anat",
+      "modalityLabel": "angio"
+    },
+    {
+      "criteria": {
+        "SeriesDescription":  "ep2d_diff_*|.*ep2d_DTI*"
+      },
+      "dataType": "dwi",
+      "modalityLabel": "dwi"
+    },
+    {
+      "criteria": {
+        "SeriesDescription": "ep2d_bold*|.*bold*|.*fmri*|.*rest*|.*fc*|.*RESTING_STATE*"
+      },
+      "dataType": "func",
+      "modalityLabel": "bold",
+	  "customLabels": "task-rest"
+    }
+  ]
+}
